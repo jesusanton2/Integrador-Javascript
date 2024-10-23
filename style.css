@@ -1,0 +1,435 @@
+body{
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+  
+}
+header{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  z-index: 10;
+}
+
+.container-header {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 100%;
+}
+
+.header-search input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  margin: 0.5rem;
+}
+.header-search input:hover {
+ transform: scale(1.05);
+ cursor: pointer;
+}
+.header-add-element button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+#btn-search{
+  background-color: #4272aa;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  width:70px;
+  height: 32px;
+}
+
+#btn-search:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+#btn-open-popup{
+  background-color: #4272aa;
+}
+
+#btn-open-popup:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+/* Main */
+
+main{
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-main{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 100%;
+  height: auto;
+ 
+
+   
+}
+
+.nav-menu{
+  width: 30%;
+  align-items: center;
+}
+
+.nav-menu h2{
+  text-align: center;
+}
+
+.nav-menu ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10px 30px ;
+  gap: 1rem;
+  width: 100%;
+  align-items: baseline;
+}
+
+.liActive{
+  text-decoration: underline;
+  background-color: bisque;
+  
+}
+
+
+
+
+/* Pop Up*/
+
+/* Estilos para el botón de abrir popup */
+#btn-open-popup {
+  padding: 10px 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/* Contenedor del pop-up */
+.container-popUp {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease; /* Animación de entrada */
+  z-index: 15;
+}
+
+/* Estilos del pop-up */
+.popUp {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  animation: slideIn 0.3s ease; /* Animación de entrada */
+  position: relative;
+}
+
+.popUp label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+.popUp input,
+.popUp select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.popUp input:focus,
+.popUp select:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.popUp select {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Botones del Pop-up */
+.popUp-btns{
+  display: flex;
+  justify-content: space-around;
+}
+.popUp button {
+  margin: 0.4rem 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+}
+
+.popUp button#delete-btn {
+  background-color: #dc3545; /* Rojo para el botón de eliminar */
+}
+
+.popUp button:hover {
+  background-color: #218838; /* Más oscuro en hover */
+}
+
+.popUp button#delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Estilos del botón de cerrar */
+.close-popUp {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Animaciones popUp */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-20%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* Pedidos PopUp */
+
+.container-pedidos-popUp{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease; /* Animación de entrada */
+  z-index: 15;
+}
+
+.container-pedidos{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 80vw;
+  height: auto;
+  animation: slideIn 0.3s ease; /* Animación de entrada */
+  position: relative;
+}
+
+
+
+/* Grid*/
+.container-grid{
+  display: flex;
+  width: 100%;
+ 
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+  gap: 0.8rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  overflow-y: auto;
+ 
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem;
+  background-color: #fff;
+  align-items: center;
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  height: auto; /* Altura fija */
+  width: auto; /* Ancho fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuir espacio uniformemente */
+  padding: 5%;
+  margin: 10%;
+}
+
+.product-item:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-item img{
+  width: 20vw;
+  height: auto;
+}
+
+.product-item h3 {
+  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+  margin: 0.5rem 0; /* Reduce el margen si es necesario */
+}
+
+.product-item p {
+  font-size: 0.9rem; /* Ajusta el tamaño de la fuente */
+  margin: 0; /* Quita el margen para evitar expansión innecesaria */
+}
+
+@media (max-width: 768px){
+
+  .header-search{
+    text-align: center;
+  }
+  .header-search input{
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+  }
+
+  .nav-menu {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  main{
+    margin-top: 200px;
+  }
+  .product-grid{
+    position: relative;
+    padding-left: 0;
+    gap: 0;
+  }
+
+}
+
+@media (min-width:769px){
+    .header{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .header-search label{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .header-search input {
+      display: flex;
+      border-radius: 0.5rem ;
+      border: 1px solid #ddd;
+    }
+
+    .container-main{
+      flex-direction: row;
+    }
+
+    .product-grid{
+      grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+      overflow-y: auto;
+    }
+
+    .nav-menu{
+      margin-top: 30px;
+    }
+
+   
+}
+
+@media (min-width:1400px){
+
+  header{
+    border-bottom: none;
+  }
+  main{
+    align-items: center;
+  }
+  .container-header{
+    width: 70%;
+    border-bottom: 1px solid #ddd;
+  }
+  .container-main{
+    width: 70%;
+  }
+
+  .product-grid{
+    grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
+  }
+}
+
+/*Arreglos*/
+
+
+.popup-hidden {
+  display: none; /* Oculta el popup por defecto */
+}
+
+.popup-visible {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container-header">
+      <div class="header">
+        <div class="header-search">
+          <label>
+            <input type="text" placeholder="Ingrese..." id="input-header">
+            <button id="btn-search">Buscar</button>
+          </label>
+        </div>
+        <div class="header-add-element">
+          <button id="btn-open-popup">
+            Agregar un elemento
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container-main">
+      <div class="nav-menu">
+        <h2>Categorias</h2>
+        <ul id="listNav" />
+
+      </div>
+      <div class="container-grid">
+        <div class="product-grid" id="product-grid">
+
+        </div>
+      </div>
+    </div>
+    <div class="container-popUp" id="container-popUp">
+      <div class="popUp">
+        <form id="form">
+          <button class="close-popUp" id="btn-close-popup">&times;</button>
+          <label for="input-nombre">Nombre</label>
+          <input id="input-nombre" type="text" placeholder="Nombre" />
+          <label for="input-precio">Precio</label>
+          <input id="input-precio" type="text" placeholder="0" />
+          <label id="select-img">Imagen</label>
+          <input type="text" id="file" placeholder="URL" />
+          <select id="categories">
+            <option>Seleccione una categoria</option>
+            <option>Hamburguesas</option>
+            <option>Papas</option>
+            <option>Gaseosas</option>
+          </select>
+          <div class="popUp-btns">
+          <button type="submit" id="submit-btn">Guardar</button>
+          <button id="delete-btn">Eliminar</button>
+          </div>
+        </form>
+        
+
+      </div>
+    </div>
+    <div id="popup-save" class="popup-hidden">
+      Producto guardado exitosamente.
+  </div>
+  
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
